@@ -1,0 +1,17 @@
+body {
+    font-size: 18px;
+    color: #909090;
+}
+
+nav {
+    text-align: center;
+}
+
+nav > a {
+    margin-right: 1em;
+}
+
+#content {
+    width: 400px;
+    margin: 0 auto;
+}

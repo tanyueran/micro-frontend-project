@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.hg
+.svn
+.CVS
+.idea
+.git
