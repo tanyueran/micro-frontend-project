@@ -1,0 +1,28 @@
+body, html {
+  margin: 0;
+  font-size: 14px;
+  height: 100%;
+  color: #333;
+}
+
+ul, li {
+  margin: 0;
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+}
+
+#child-wrapper {
+  height: 100%;
+
+  &:before {
+    content: '';
+    display: table;
+  }
+}

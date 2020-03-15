@@ -1,18 +1,14 @@
 import './public-path.js'
 import React from 'react';
 import ReactDOM, {render} from 'react-dom';
-import {Provider} from 'react-redux';
 
 import App from './App';
-import store from './store/index.js'
 
 // 渲染函数
 function show() {
   render(
-    <Provider store={store}>
-      <App/>
-    </Provider>,
-    document.getElementById('a')
+    <App/>,
+    document.getElementById('react-container')
   );
 }
 
@@ -42,9 +38,6 @@ export async function mount(props) {
  */
 export async function unmount() {
   console.log('[react]卸载应用');
-  let a = document.getElementById('a')
-  if (a != null) {
-    ReactDOM.unmountComponentAtNode(document.getElementById('a'));
-  }
+  ReactDOM.unmountComponentAtNode(document.getElementById('react-container'));
 }
 

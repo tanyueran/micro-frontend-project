@@ -1,13 +1,9 @@
 <template>
   <div id="app">
-    <div>
-      <router-link to="/">a1</router-link>
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      <router-link to="/a2">a2</router-link>
-    </div>
+    <nav>
+      <router-link to="/">页面1</router-link>
+      <router-link to="/a2">页面2</router-link>
+    </nav>
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
@@ -17,10 +13,6 @@
 <script>
   export default {
     name: 'app1',
-    components: {},
-    created() {
-      console.log('=====================================')
-    }
   }
 </script>
 
@@ -28,6 +20,26 @@
   #app {
     color: red;
     height: 100%;
-    border: 1px solid #333;
+  }
+
+  nav {
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    justify-content: center;
+    font-size: 18px;
+    align-content: center;
+  }
+
+  nav > a {
+    display: flex;
+    padding: 0 20px;
+    text-decoration: none;
+    background-color: #efefef;
+    margin-left: 10px;
+  }
+
+  nav > a:hover {
+    background-color: #fff;
   }
 </style>

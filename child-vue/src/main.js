@@ -14,8 +14,8 @@ if (HOST === 'product') {
   console.log(`===${HOST}`);
 }
 
-import a1 from './a1.vue';
-import a2 from './a2.vue';
+import a1 from './page1.vue';
+import a2 from './page2.vue';
 
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
@@ -26,6 +26,7 @@ VueRouter.prototype.push = function push(location) {
 let instance = null, router = null;
 
 function render() {
+  // 路由
   router = new VueRouter({
     mode: 'history',
     base: window.__POWERED_BY_QIANKUN__ ? '/vue' : '',
@@ -40,18 +41,21 @@ function render() {
       }
     ],
   });
-
+  // 实例
   instance = new Vue({
     router,
     render: createElement => createElement(App),
   }).$mount('#app');
 }
 
-
+// 支持普通的方式展示
 if (!window.__POWERED_BY_QIANKUN__) {
   render();
 }
 
+/**
+ * 导出生命周期函数供给主应用调用
+ * */
 export async function bootstrap() {
   console.log('[vue] vue app bootstraped');
 }
@@ -63,7 +67,6 @@ export async function mount(props) {
 
 export async function unmount() {
   console.log('[vue]unmount')
-  console.log(instance)
   instance.$destroy();
   instance = null;
   router = null;
