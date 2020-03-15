@@ -55,8 +55,10 @@ class App extends React.Component {
                 {
                   routes.map((route, i) => <Route exact={route.exact} key={i} path={route.path} render={
                       props => {
-                        return (route.isThis ? <route.component {...props} routes={route.children}/> :
-                          <div id={'child-wrapper'}></div>);
+                        return <>
+                          <route.component {...props} routes={route.children}/>
+                          <div id={'child-wrapper'}></div>
+                        </>;
                       }
                     }
                     />

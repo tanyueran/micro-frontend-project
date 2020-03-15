@@ -24,7 +24,7 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
   #app {
     color: red;
     height: 100%;

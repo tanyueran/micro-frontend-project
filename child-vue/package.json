@@ -1,9 +1,9 @@
 {
-  "name": "app1",
+  "name": "vue-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test": "vue-cli-service build --mode test",
     "product": "vue-cli-service build --mode product",
@@ -26,8 +26,6 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "mockjs": "^1.0.1-beta3",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.0",
     "vue-cli-plugin-element": "^1.0.1",
     "vue-template-compiler": "^2.6.10"
   },

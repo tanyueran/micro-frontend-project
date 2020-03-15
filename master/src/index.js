@@ -18,9 +18,9 @@ function genActiveRule(routerPrefix) {
 }
 
 registerMicroApps([
-  {name: 'vue app', entry: '//localhost:3001', render, activeRule: genActiveRule('/vue')},
-  {name: 'putong app', entry: '//localhost:3002', render, activeRule: genActiveRule('/simple')},
-  {name: 'react app', entry: '//localhost:3003', render, activeRule: genActiveRule('/react')},
+  {name: 'vue-app', entry: '//localhost:3001/vue', render, activeRule: genActiveRule('/vue')},
+  {name: 'putong-app', entry: '//localhost:3002', render, activeRule: genActiveRule('/simple')},
+  {name: 'react-app', entry: '//localhost:3003/react', render, activeRule: genActiveRule('/react')},
 ]);
 
 ReactDOM.render(

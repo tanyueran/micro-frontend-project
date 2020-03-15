@@ -1,5 +1,5 @@
 import React, {Suspense} from 'react';
-import {HashRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import routes from './router/index.js'
 
 import MLoading from './components/MLoading.js'
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Suspense fallback={<MLoading/>}>
-        <Router>
+        <Router basename={window.__POWERED_BY_QIANKUN__ ? '/react' : '/'}>
           <nav style={{fontSize: '18px'}}>
             <Link to={'/'}>home</Link>
             &nbsp;

@@ -3,7 +3,13 @@
 
 ## 如何跑起来
 
+全都使用yarn
 
+每个应用(master、child-simple、child-react、child-vue)
+
+进入 yarn install
+
+然后 yarn start
 
 
 
@@ -13,7 +19,7 @@
 --master        主应用
 --child-vue     vue应用
 --child-react   react16应用
---child-simple  普通的页面
+--child-simple  普通的页面(暂时不能集成进来)
 ```
 
 

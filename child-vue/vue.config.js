@@ -29,7 +29,7 @@ module.exports = {
   // 开发的代理
   devServer: {
     disableHostCheck: true,
-    port: '3002',
+    port: '3001',
     hot: true,
     overlay: {
       warnings: false,
